@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        :root,
+        body {
+            height: 100%;
+        }
+
+        .target {
+            /*display: none;*/
+            width: 100%;
+            height: 100%;
+        }
+
+        div[id]:not(:target) {
+            display: none;
+        }
+
+        #red {
+            background-color: red;
+        }
+
+        #green {
+            background-color: green;
+        }
+
+        #gray {
+            background-color: gray;
+        }
+
+        .button-wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .button-wrapper a {
+            display: inline-block;
+        }
+
+        .button-wrapper .btn {
+            width: 100px;
+            height: 40px;
+            color: #fff;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            background-color: cadetblue;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        .button-wrapper .btn:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        .button-wrapper .btn:target {
+            display: block;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+
+<div class="button-wrapper">
+    <a class="btn red" href="#red">red</a>
+    <a class="btn green" href="#green">green</a>
+    <a class="btn gray" href="#gray">gray</a>
+</div>
+
+
+<div id="red" class="target"></div>
+<div id="green" class="target"></div>
+<div id="gray" class="target"></div>
+
+
+</body>
+</html>

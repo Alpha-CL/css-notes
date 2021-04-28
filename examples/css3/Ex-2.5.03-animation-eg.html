@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        :root,
+        body {
+            height: 100%;
+            background-color: rgba(0, 0, 0, 1);
+        }
+
+        @keyframes change-bg {
+
+            0% {
+                opacity: 0;
+            }
+            25% {
+                opacity: 1;
+            }
+            75% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes sunrise {
+            0% {
+                opacity: .1;
+                transform: scale(.2, .2);
+                top: calc(60%);
+                left: calc(40%);
+            }
+            4% {
+                opacity: .3;
+                transform: scale(.4, .4);
+                top: calc(40%);
+                left: calc(30%);
+            }
+            8% {
+                opacity: .6;
+                transform: scale(.6, .6);
+                top: calc(20%);
+                left: calc(20%);
+            }
+            12% {
+                opacity: .9;
+                transform: scale(.8, .8);
+                top: calc(10%);
+                left: calc(10%);
+            }
+            16% {
+                opacity: 1;
+                transform: scale(1, 1);
+                top: calc(0%);
+                left: calc(0%);
+            }
+            20% {
+                opacity: 1;
+                transform: scale(1, 1);
+                top: calc(0%);
+                left: calc(0%);
+            }
+            24% {
+                opacity: 1;
+                transform: scale(1, 1);
+                top: calc(0%);
+                left: calc(0%);
+            }
+            28% {
+                opacity: 1;
+                transform: scale(1, 1);
+                top: calc(0%);
+                left: calc(0%);
+            }
+            32% {
+                opacity: 1;
+                transform: scale(1, 1);
+                top: calc(0%);
+                left: calc(0%);
+            }
+            36% {
+                opacity: 1;
+                transform: scale(1, 1);
+                top: calc(0%);
+                left: calc(0%);
+            }
+
+            40% {
+                opacity: 1;
+                transform: scale(1, 1);
+                top: calc(0% - 200px);
+                left: calc(0% - 200px);
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes moon-decline {
+
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 0;
+            }
+
+            54% {
+                opacity: .2;
+                transform: scale(1, 1);
+                top: calc(4%);
+                left: calc(86%);
+            }
+            58% {
+                opacity: .4;
+                transform: scale(1, 1);
+                top: calc(4%);
+                left: calc(86%);
+            }
+            60% {
+                opacity: 6;
+                transform: scale(1, 1);
+                top: calc(4%);
+                left: calc(86%);
+            }
+            66% {
+                opacity: .8;
+                transform: scale(1, 1);
+                top: calc(4%);
+                left: calc(86%);
+            }
+            70% {
+                opacity: 1;
+                transform: scale(1, 1);
+                top: calc(4%);
+                left: calc(86%);
+            }
+            74% {
+                opacity: 1;
+                transform: scale(1, 1);
+                top: calc(4%);
+                left: calc(86%);
+            }
+
+            78% {
+                opacity: 1;
+                transform: scale(1, 1);
+                top: calc(4%);
+                left: calc(86%);
+            }
+            82% {
+                opacity: .8;
+                transform: scale(.8, .8);
+                top: calc(15%);
+                left: calc(79%);
+            }
+            86% {
+                opacity: .6;
+                transform: scale(.6, .6);
+                top: calc(26%);
+                left: calc(72%);
+            }
+            90% {
+                opacity: .4;
+                transform: scale(.4, .4);
+                top: calc(37%);
+                left: calc(65%);
+            }
+            100% {
+                opacity: .2;
+                transform: scale(.2, .2);
+                top: calc(50%);
+                left: calc(60%);
+            }
+        }
+
+        .bg {
+            height: 60%;
+            overflow: hidden;
+            background-image: linear-gradient(to bottom left, rgba(0, 100, 255, .3), rgba(0, 220, 255, .9));
+
+            animation: change-bg 10s infinite cubic-bezier(.5, 0, .5, 1);
+        }
+
+        .sun {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 255, 255, 1);
+            border-radius: 50%;
+            box-shadow: 0 0 8px 16px rgba(255, 255, 255, 1),
+            0 0 100px 80px rgba(255, 255, 255, 1),
+            0 0 100px 80px rgba(255, 255, 0, 1);
+
+            animation: sunrise 10s infinite ease-in;
+        }
+
+        .moon {
+            position: absolute;
+            border-radius: 50%;
+
+            animation: moon-decline 10s infinite ease-in;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+
+<svg class="moon" width="160px" height="160px" style="-ms-transform: rotate(360deg);
+-webkit-transform: rotate(360deg); transform: rotate(360deg);"
+     preserveAspectRatio="xMidYMid meet" viewBox="0 0 750 850">
+    <path d="M732 392q3-2 7-1t3 5q-4 76-36 142t-84 114t-122 74t-147 23q-71-4-133-33t-109-77t-77-109T1 397q-4-78 23-147t74-122t114-84T354 8q4 0 6 3t-2 7q-31 40-46 90t-8 106q5 45 25 85t51 71t71 51t85 25q56 7 106-8t90-46z"
+          fill="yellow"/>
+</svg>
+
+<div class="mask-layer"></div>
+
+
+<div class="bg">
+    <div class="sun"></div>
+</div>
+
+
+</body>
+</html>

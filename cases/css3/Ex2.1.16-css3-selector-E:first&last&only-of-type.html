@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        p:first-of-type {
+            background-color: red;
+        }
+
+        p:last-of-type {
+            background-color: #0099cc;
+        }
+
+        span:only-of-type {
+            background-color: pink;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+
+<div>
+    <span>0</span>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <span>4</span>
+</div>
+
+
+<div>
+    <span>0</span>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <span4>4</span4>
+</div>
+
+
+<div>
+    <p>p</p>
+    <span>sp</span>
+</div>
+
+
+<script>
+
+
+    /**
+     * E:first-of-type & E:last-of-type & E:only-of-type
+     *
+     * 不受同级兄弟元素的影响
+     *
+     */
+
+
+    // E:first-of-type                       // 选中同级兄弟元素的第一个
+
+    // E:last-of-type                        // 选中同级兄弟元素的最后一个
+
+    // E:only-of-type                        // 选中父子元素的子元素( 有且只有一个子元素 )
+
+
+</script>
+
+
+</body>
+</html>

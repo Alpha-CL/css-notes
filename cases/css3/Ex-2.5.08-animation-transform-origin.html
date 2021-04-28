@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+
+        :root,
+        body {
+            height: 100%;
+        }
+
+        body {
+            perspective: 800px;
+            transform-style: preserve-3d;
+        }
+
+        .demo {
+            position: absolute;
+            top: 200px;
+            left: 300px;
+            width: 100px;
+            height: 200px;
+            background-image: linear-gradient(blue, yellow);
+            background-size: cover;
+            color: white;
+
+            transform-origin: 100px 100px 100px;
+            transform: rotateY(45deg);
+        }
+
+
+    </style>
+
+
+
+</head>
+<body>
+
+
+<div class="demo">transform-origin-3d</div>
+
+
+
+</body>
+</html>

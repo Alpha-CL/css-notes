@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        @keyframes secondrun {
+
+            0% {
+                transform: rotate(180deg);
+            }
+            100% {
+                transform: rotate(540deg);
+            }
+        }
+
+        @keyframes minuterun {
+
+            0% {
+                transform: rotate(181deg);
+            }
+            100% {
+                transform: rotate(541deg);
+            }
+        }
+
+        @keyframes hourrun {
+
+            0% {
+                transform: rotate(181deg);
+            }
+            100% {
+                transform: rotate(541deg);
+            }
+        }
+
+        .clock,
+        .second,
+        .minute,
+        .hour {
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .clock {
+            position: relative;
+            background-image: url("img/steps-eg2-colck.png");
+            width: 512px;
+            height: 512px;
+        }
+
+        .second {
+            background-image: url("img/steps-eg2-second.png");
+            top: 180px;
+            left: 247px;
+            width: 16px;
+            height: 278px;
+            z-index: 3;
+
+            transform-origin: center 76px;
+            transform: rotate(180deg);
+
+            animation: secondrun 60s steps(60, end) infinite;
+        }
+
+        .minute {
+            background-image: url("img/steps-eg2-minute.png");
+            top: 240px;
+            left: 238px;
+            width: 32px;
+            height: 218px;
+
+            transform-origin: center 16px;
+            transform: rotate(181deg);
+
+            animation: minuterun 3600s steps(60, end) ,infinite;
+        }
+
+        .hour {
+            background-image: url("img/steps-eg2-hover.png");
+            top: 240px;
+            left: 238px;
+            width: 32px;
+            height: 148px;
+
+            transform-origin: center 16px;
+            transform: rotate(180deg);
+
+            animation: hourrun 43200s steps(60, end) ,infinite;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+
+<div class="clock">
+    <div class="second"></div>
+    <div class="minute"></div>
+    <div class="hour"></div>
+</div>
+
+
+</body>
+</html>

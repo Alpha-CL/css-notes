@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+
+        @keyframes change-color {
+
+            0% {
+                background-color: red;
+            }
+            25% {
+                background-color: green;
+            }
+            50% {
+                background-color: blue;
+            }
+            75% {
+                background-color: black;
+            }
+            100% {
+                background-color: white;
+            }
+        }
+
+        .demo {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation: change-color 4s steps(1, end);
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+
+<div class="demo"></div>
+
+
+</body>
+</html>

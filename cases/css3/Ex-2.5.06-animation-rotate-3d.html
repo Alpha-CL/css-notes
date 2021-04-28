@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            perspective: 800px;
+            perspective-origin: 300px 300px;
+            transform-style: preserve-3d;
+        }
+
+        @keyframes change {
+
+            from {
+
+                transform: rotateX(-45deg);
+            }
+            to {
+                transform: rotateX(45deg);
+            }
+
+        }
+
+        .demo {
+            position: absolute;
+            top: 200px;
+            left: 200px;
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(blue, deepskyblue);
+
+            transform-origin: 0 0;
+            animation: change 2s  infinite cubic-bezier(.5, 0, .5, 1) alternate;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+
+<div class="demo"></div>
+
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+
+        .wrapper {
+            display: flex;
+
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            position: absolute;
+            top: calc(50% - 100px);
+            left: calc(50% - 300px);
+            width: 600px;
+            height: 200px;
+            border: 1px solid black;
+        }
+
+        .item {
+            flex: 1 1 auto;
+
+            height: 40px;
+            color: #fff;
+            background-color: #0099cc;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        .item:nth-of-type(2) {
+            flex: 0 0 300px;
+        }
+
+        .item:last-of-type {
+            flex: 2 0 auto;
+        }
+
+        .item:not(:last-of-type) {
+            border-right: 1px solid white;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+
+<div class="wrapper">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+</div>
+
+
+</body>
+</html>
