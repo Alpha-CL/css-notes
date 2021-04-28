@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .demo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+
+            animation: run 4s cubic-bezier(.5, 1, 1, 1), color-change 4s;
+        }
+
+        @keyframes run {
+
+            0% {
+                top: 0;
+                left: 0;
+            }
+            25% {
+                top: 0;
+                left: 100px;
+            }
+            50% {
+                top: 100px;
+                left: 100px;
+            }
+            70% {
+                top: 100px;
+                left: 0;
+            }
+            100% {
+                top: 0;
+                left: 0;
+            }
+        }
+
+        @keyframes color-change {
+
+            from {
+                background-color: #ff0;
+            }
+
+            60% {
+                background: #f0f;
+            }
+
+            to {
+                background-color: #0ff;
+            }
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+
+<div class="demo"></div>
+
+
+</body>
+</html>

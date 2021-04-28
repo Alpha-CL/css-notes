@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+
+
+        :root,
+        body {
+            height: 100%;
+        }
+
+        body {
+            perspective: 800px;
+            transform-style: preserve-3d;
+            perspective-origin: 275px 275px;
+        }
+
+        .demo {
+            position: absolute;
+            left: 200px;
+
+            width: 150px;
+            height: 150px;
+            background-image: linear-gradient(blue, yellow);
+            background-size: cover;
+        }
+
+        .demo1 {
+            top: 200px;
+
+            transform: translateZ(100px) rotateY(45deg);
+        }
+
+        .demo2 {
+            top: 350px;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+
+<div class="demo demo1"></div>
+<!--<div class="demo demo2"></div>-->
+
+
+
+</body>
+</html>

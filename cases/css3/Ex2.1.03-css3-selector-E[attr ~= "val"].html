@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+
+        div[data~="a"] {
+
+            background-color: red;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+
+<div data="a">1</div>
+<div data=" a">1</div>
+<div data="a ">1</div>
+<div data=" a ">1</div>
+<div data="b">1</div>
+<div data="a b">1</div>
+<div data="aa b c">1</div>
+
+
+<script>
+
+
+    /**
+     * E[attr ~= "val"]
+     *
+     * 元素属性值必须是 'val' | ' val' | 'val ' | ' val '       // 可以左右两边带空格，但是不允许跟 val 值不同
+     */
+
+
+</script>
+
+
+</body>
+</html>

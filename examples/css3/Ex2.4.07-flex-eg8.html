@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        padding: 20px;
+        margin: 40px auto 0;
+        width: 600px;
+        height: 600px;
+        border: 1px solid #333;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    .container .col {
+        padding: 20px;
+        flex: 1 0 200px;
+        border: 1px solid #333;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .container .col .row {
+        flex: 1 0 auto;
+        width: 100%;
+        height: 30px;
+        background-color: black;
+    }
+
+    .container .col .row:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+
+    </style>
+
+</head>
+<body>
+
+
+<div class="container">
+    <div class="col col-1">
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+    </div>
+    <div class="col col-2">
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+    </div>
+</div>
+
+
+</body>
+</html>

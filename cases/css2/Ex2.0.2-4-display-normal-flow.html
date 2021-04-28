@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        :root,
+        body {
+            height: 100%;
+        }
+
+        :root {
+            margin-bottom: 1000px;
+        }
+
+        .parent {
+            margin: 0 0 20px 50px;
+            padding: 30px;
+            width: 300px;
+            height: 200px;
+            border: 2px solid black;
+            color: white;
+            background-color: #0099cc;
+        }
+
+        .child {
+            height: 100px;
+            background-color: forestgreen;
+            border: 2px solid white;
+        }
+
+        .child2 {
+            width: auto;
+            margin: auto;
+        }
+
+        .child3 {
+            width: 200px;
+        }
+
+
+        .child4 {
+            margin: 0 -50px;
+        }
+
+        .wrapper {
+            padding: 10px;
+            margin-bottom: 30px;
+            width: 300px;
+            height: 400px;
+            border: 1px solid black;
+            background-color: lightcoral;
+        }
+
+        .item {
+            margin: auto;
+            width: 100px;
+            height: 100px;
+            border: 2px solid white;
+        }
+
+        .wrapper2 {
+            padding: 10px;
+            width: 300px;
+            height: 400px;
+            background-color: lightcoral;
+        }
+
+        .item2 {
+            padding: 50%;
+            margin: 50%;
+            width: 50%;
+            height: 50%;
+            background-color: greenyellow;
+        }
+
+
+        .demo {
+            margin-top: 100px;
+            width: 400px;
+            height: 300px;
+            background-color: blue;
+        }
+
+        .box{
+            padding: 10px;
+            width: 200px;
+            height: 200px;
+            border: 1px solid white;
+            color: white;
+            margin-top: 400px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+
+<div class="parent parent1">
+    <div class="child child1">默认情况 width 自动吸收剩余横向距离</div>
+</div>
+
+<div class="parent parent2">
+    <div class="child child2">子项 设置 width: auto; && margin: auto; 时，width 权重较大，吸收剩余横向宽度</div>
+</div>
+
+<div class="parent parent3">
+    <div class="child child3">子项设置 width, border, padding 后，默认 margin-right 自动吸收剩余横向距离</div>
+</div>
+
+<div class="parent parent4">
+    <div class="child child4">子项设置 padding, margin, width  百分比时都是相对于父级的宽度</div>
+</div>
+
+
+<hr>
+
+<div class="wrapper">
+    <div class="item">margin，padding，border 仅作用域水平空间占位</div>
+</div>
+
+<div class="wrapper2">
+    width: 300px; height: 400px
+    <div class="item2">子项设置 padding, margin, width  百分比时都是相对于父级的宽度值进行计算
+        <b>padding: 150px; margin: 150px</b></div>
+</div>
+
+
+<div class="demo">
+<!--    margin-top: 100px-->
+    <div class="box">无论父子还是兄弟元素，margin 垂直方向相邻，即会合并( 仅较大的 margin值 有效 )</div>
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>

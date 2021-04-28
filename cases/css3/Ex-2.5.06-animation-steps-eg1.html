@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+
+
+        @keyframes cursor {
+
+            0% {
+                border-left-color: rgba(0, 0, 0, 0);
+            }
+            50% {
+                border-left-color: rgba(0, 0, 0, 1);
+            }
+            100% {
+                border-left-color: rgba(0, 0, 0, 0);
+            }
+
+        }
+
+        @keyframes cover {
+
+            0%{
+                left: 0;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+
+        .demo{
+            display: inline-block;
+            position: absolute;
+            top: calc(50% - 80px);
+            left: calc(50% - 220px);
+            font-size: 80px;
+            height: 100px;
+            line-height: 100px;
+            font-family: monospace;
+            border: 1px solid #eee;
+        }
+
+        .demo:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            height: 90px;
+            width: 100%;
+            background-color: #fff;
+            box-sizing: border-box;
+            border-left: 2px solid #666;
+
+            animation: cursor 1s steps(1 , end) infinite, cover 11s steps(11, end);
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+
+<div class="demo">abcdefghijk</div>
+
+
+</body>
+</html>

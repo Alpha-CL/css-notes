@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+
+        .wrapper {
+
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+
+            position: absolute;
+            top: calc(50% - 300px);
+            left: calc(50% - 300px);
+            width: 600px;
+            height: 600px;
+            border: 1px solid black;
+        }
+
+        .item {
+            flex: 1 1 auto;
+            width: 250px;
+            height: 200px;
+        }
+
+        .item:nth-of-type(1) {
+            width: 100%;
+            background-color: #0ff;
+        }
+
+        .item:nth-of-type(2) {
+            background-color: #ff0;
+        }
+
+        .item:nth-of-type(3) {
+            background-color: #f0f;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+
+<div class="wrapper">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+</div>
+
+
+</body>
+</html>
